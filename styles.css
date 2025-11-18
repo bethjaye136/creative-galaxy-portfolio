@@ -1,0 +1,341 @@
+/* --- 1. THEME VARIABLES (Forces Pink Mode) --- */
+:root {
+  /* Text: A cute dark pink/purple instead of harsh black */
+  --text: #915f6d;
+
+  /* Border: A vibrant, solid pastel pink */
+  --border: #ffa6c9;
+
+  /* Accent: Hot pink for titles and hover effects */
+  --accent: #ff5c8d;
+
+  /* Background: Very pale pink pattern background */
+  --bg: #fff0f5;
+
+  /* Container BG: White, so the content pops */
+  --container-bg: #ffffff;
+
+  /* Gradient: Soft pink fade for buttons */
+  --gradientTop: #fff9fb;
+  --gradientBottom: #ffe3ee;
+}
+
+/* --- 2. GLOBAL SETTINGS --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  font-family: 'MS PGothic', 'Courier New', sans-serif;
+  color: var(--text);
+
+  /* BACKGROUND: Cute Polka Dots */
+  background-color: var(--bg);
+  background-image: radial-gradient(#ffcce0 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+/* --- 3. THE MAIN CONTAINER --- */
+.container {
+  max-width: 55rem;
+  margin: 20px auto;
+
+  /* The "Ridge" border makes it look like a plastic toy */
+  /* border: 6px ridge var(--border); */
+  outline: 3px solid white;
+  outline-offset: 2px;
+
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 10px;
+
+  /* Forces the background inside the box to be white */
+  background-color: var(--container-bg);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2); /* Soft pink glow */
+}
+
+/* --- 4. HEADER --- */
+header {
+  width: 100%;
+  height: 150px;
+  /* Replace URL below with a gif from TextureTown or a pink banner */
+  background-color: #ffcce6;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #ffcce6,
+    #ffcce6 10px,
+    #ffb3da 10px,
+    #ffb3da 20px
+  );
+  border: 4px ridge var(--border);
+  border-radius: 25px 15px 25px 15px;
+  transform: rotate(-1deg); /* Tilts the header slightly left! */
+  width: 102%; /* Make it slightly wider than the box for a layered look */
+  margin-left: -1%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+header span {
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: -10px; /* Hangs slightly off the banner */
+  right: 20px;
+
+  /* Sticker effect for text */
+  background-color: white;
+  color: var(--accent);
+  padding: 5px 15px;
+  border: 3px dashed var(--border);
+  border-radius: 15px;
+  transform: rotate(-3deg); /* Tilted cute effect */
+  box-shadow: 3px 3px 0px #ffd1e3;
+}
+
+#middle {
+  border: none;
+}
+
+/* --- 5. COLUMNS --- */
+.small {
+  flex: 1 1 180px;
+  border: none;
+}
+.half {
+  flex: 2 1 400px;
+}
+.full {
+  flex: 1 1 100%;
+}
+
+/* --- 6. NAVIGATION (Side Menu) --- */
+nav {
+  background: #fff5f9;
+  border: 3px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+nav div {
+  text-align: center;
+  font-weight: bold;
+  color: var(--accent);
+  border-bottom: 2px dotted var(--border);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  display: block;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px; /* Pill-shaped buttons */
+  margin: 6px 0;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+/* Hover Effect: Turns hot pink */
+nav a:hover {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  cursor: help;
+}
+
+/* --- 7. CONTENT BOXES --- */
+section {
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+div.small > img {
+  border: 3px ridge var(--border);
+  border-radius: 10px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* --- 8. TEXT STYLES --- */
+h1 {
+  color: var(--accent);
+  text-align: center;
+  border-bottom: 2px dashed var(--border);
+  padding-bottom: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+h2,
+h3 {
+  color: var(--border);
+  text-align: center;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  background-color: #ffe6f0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--accent);
+  font-size: 11px;
+  /* border-top: 2px dotted var(--border); */
+  padding-top: 10px;
+}
+
+/* --- 9. MOBILE FIX --- */
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .small,
+  .half {
+    width: 100%;
+    border: none;
+  }
+}
+
+/* --- FLOATING IMAGES CLASS --- */
+.floater {
+  position: fixed; /* Stays in place when you scroll! */
+  z-index: -1; /* Puts it BEHIND the text boxes */
+  pointer-events: none; /* Lets you click through them if they cover a link */
+  max-width: 200px; /* Prevents them from being too huge */
+  height: auto;
+}
+
+/* Positions */
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.random-spot {
+  top: 40%;
+  left: 5%;
+}
+/* Position: Top Left */
+.top-left {
+  top: 0;
+  left: 0;
+  /* Optional: Add margin if you don't want it touching the very edge */
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* Position: Bottom Right */
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.pkmn {
+  color: black;
+  background: white;
+  padding: 4px;
+  image-rendering: pixelated;
+  border-image-width: 14px;
+  border-image-outset: 7px;
+  border-image-slice: 36%;
+  border-image-repeat: round round;
+  border-style: solid;
+  border-image-source: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVAgMAAAA/TvYGAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxQTFRFAAAAAAAA////+Pj4EZhu1AAAAAR0Uk5TAP///7MtQIgAAABaSURBVHicY2T9zcDA+ptRUkeA4Yg6YyhrAMPq34xZ+nsYRdQYpbw/MLguY2TtLmBInc3IZnWAQfI5o+RzBgY2KxIodkuwPqgpkj4fGFyWo1ukLcBwVI0R4hYAN4IjlkoaqZsAAAAASUVORK5CYII=');
+}
+.photopile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+.photopile figure {
+  display: inline-block;
+  background: white;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
+  transform: rotate(2deg);
+  margin: 0 -25px;
+}
+.photopile figure img {
+  max-width: calc(100% - 2rem);
+  margin: 1rem 1rem 0 1rem;
+  border: 2px rgb(0, 0, 0, 0.55) inset;
+}
+.photopile figcaption,
+.popovers figcaption {
+  font-family: /* set this to have it match the rest of the page */ ;
+  text-align: center;
+  margin: 0.5rem 1rem 1rem 1rem;
+  font-size: 1rem;
+  color: black;
+}
+.photopile button {
+  background: none;
+  border: none;
+  max-width: 40%;
+}
+.photopile button:hover,
+.photopile button:focus {
+  z-index: 3;
+  cursor: pointer;
+}
+.photopile button:nth-child(2n) {
+  transform: rotate(-10deg);
+}
+.photopile button:nth-child(3n) {
+  transform: rotate(5deg);
+}
+.photopile button:nth-child(4n) {
+  transform: rotate(4deg);
+}
+.photopile button:nth-child(5n) {
+  transform: rotate(-2deg);
+}
+.photopile button:nth-child(6n) {
+  transform: rotate(-7deg);
+}
+:popover-open {
+  border: none;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+.popovers figure:popover-open {
+  display: block;
+  background: white;
+  width: 88vmin;
+}
+.popovers figure:popover-open figcaption {
+  margin: 2.5vmin 1rem 4vmin 1rem;
+  font-size: 175%;
+  color: black;
+}
+.popovers figure:popover-open img {
+  margin: 4vmin 4vmin 0 4vmin;
+  width: 80vmin;
+  border: 4px rgb(0, 0, 0, 0.55) inset;
+}
