@@ -1,13 +1,13 @@
 /* --- 1. THEME VARIABLES (Forces Pink Mode) --- */
 :root {
   /* Text: A cute dark pink/purple instead of harsh black */
-  --text: #915f6d;
+  --text: #450f5a;
 
   /* Border: A vibrant, solid pastel pink */
-  --border: #ffa6c9;
+  --border: #3c0f5a;
 
   /* Accent: Hot pink for titles and hover effects */
-  --accent: #ff5c8d;
+  --accent: #440083;
 
   /* Background: Very pale pink pattern background */
   --bg: #fff0f5;
@@ -16,8 +16,8 @@
   --container-bg: #ffffff;
 
   /* Gradient: Soft pink fade for buttons */
-  --gradientTop: #fff9fb;
-  --gradientBottom: #ffe3ee;
+  --gradientTop: #fdf9ff;
+  --gradientBottom: #f6e3ff;
 }
 
 /* --- 2. GLOBAL SETTINGS --- */
@@ -33,7 +33,7 @@ body {
 
   /* BACKGROUND: */
   background-color: var(--bg);
-  background-image: url(https://cinni.net/images/web/bg/move_heart.gif);
+  background-image: url(https://64.media.tumblr.com/4f3cbb1b66a76a19a9794a162373abc5/tumblr_inline_n258pbAEBc1qhwjx8.png);
 }
 
 /* --- 3. THE MAIN CONTAINER --- */
@@ -61,16 +61,8 @@ header {
   height: 150px;
   /* Replace URL below with a gif from TextureTown or a pink banner */
   background-color: #ffcce6;
-  background-image: repeating-linear-gradient(
-    45deg,
-    #ffcce6,
-    #ffcce6 10px,
-    #ffb3da 10px,
-    #ffb3da 20px
-  );
-  border: 4px ridge var(--border);
-  border-radius: 25px 15px 25px 15px;
-  transform: rotate(-1deg); /* Tilts the header slightly left! */
+  background-image: url(https://64.media.tumblr.com/4f3cbb1b66a76a19a9794a162373abc5/tumblr_inline_n258pbAEBc1qhwjx8.png);
+  border-radius: 15px;
   width: 102%; /* Make it slightly wider than the box for a layered look */
   margin-left: -1%;
   position: relative;
