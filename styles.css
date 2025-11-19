@@ -1,119 +1,33 @@
-/* --- 1. THEME VARIABLES (Forces Pink Mode) --- */
 :root {
-  /* Text: A cute dark pink/purple instead of harsh black */
   --text: #450f5a;
-
-  /* Border: A vibrant, solid pastel pink */
   --border: #3c0f5a;
-
-  /* Accent: Hot pink for titles and hover effects */
   --accent: #440083;
-
-  /* Background: Very pale pink pattern background */
-  --bg: #fff0f5;
-
-  /* Container BG: White, so the content pops */
+  --bg: #fcf0ff;
   --container-bg: #ffffff;
-
-  /* Gradient: Soft pink fade for buttons */
   --gradientTop: #fdf9ff;
   --gradientBottom: #f6e3ff;
 }
 
-/* --- 2. GLOBAL SETTINGS --- */
+/* Layout and Styling */
+
 * {
   box-sizing: border-box;
-  font-family: 'Monaspace Xenon';
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  font-family: 'Monaspace Radon', monospace;
   padding: 10px;
-
   color: var(--text);
-
-  /* BACKGROUND: */
   background-color: var(--bg);
-  background-image: url(https://64.media.tumblr.com/4f3cbb1b66a76a19a9794a162373abc5/tumblr_inline_n258pbAEBc1qhwjx8.png);
-}
-
-/* --- 3. THE MAIN CONTAINER --- */
-.container {
-  max-width: 55rem;
-  margin: 20px auto;
-
-  outline: 3px solid white;
-  outline-offset: 2px;
-
-  border-radius: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 15px;
-  gap: 10px;
-
-  /* Forces the background inside the box to be white */
-  background-color: var(--container-bg);
-  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2); /* Soft pink glow */
-}
-
-/* --- 4. HEADER --- */
-header {
-  width: 100%;
-  height: 150px;
-  /* Replace URL below with a gif from TextureTown or a pink banner */
-  background-color: #ffcce6;
-  background-image: url(https://64.media.tumblr.com/4f3cbb1b66a76a19a9794a162373abc5/tumblr_inline_n258pbAEBc1qhwjx8.png);
-  border-radius: 15px;
-  width: 102%; /* Make it slightly wider than the box for a layered look */
-  margin-left: -1%;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-header span {
-  font-size: 2.5rem;
-  position: absolute;
-  bottom: -10px; /* Hangs slightly off the banner */
-  right: 20px;
-  background-color: white;
-  color: var(--accent);
-  padding: 5px 15px;
-  border: 3px dashed var(--border);
-  border-radius: 15px;
-  transform: rotate(-3deg); /* Tilted cute effect */
-  box-shadow: 3px 3px 0px #ffd1e3;
-}
-
-.big {
-  border: none;
-  max-height: 500px;
-}
-
-.half {
-  flex: 2 1 400px;
-}
-.full {
-  flex: 1 1 100%;
-}
-
-section {
-  background: white;
-  border: 2px solid var(--border);
-  border-radius: 10px;
-  padding: 15px;
-}
-
-h1 {
-  color: var(--accent);
-  text-align: center;
-  border-bottom: 2px dashed var(--border);
-  padding-bottom: 10px;
-  font-family: 'Courier New', monospace;
-}
-
-h2,
-h3 {
-  color: var(--border);
-  text-align: center;
+  background-image: url(https://web.archive.org/web/20090728044531im_/http://es.geocities.com/zalonego/estrella.gif);
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -121,112 +35,256 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
-a:hover {
-  background-color: #ffe6f0;
-}
 
 footer {
   text-align: center;
   margin-top: 20px;
   color: var(--accent);
   font-size: 11px;
-  /* border-top: 2px dotted var(--border); */
   padding-top: 10px;
 }
 
-/* --- FLOATING IMAGES CLASS --- */
+h1,
+h2,
+h3 {
+  margin: 5px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+  border-bottom: 2px dashed var(--border);
+  padding-bottom: 10px;
+  font-family: 'Courier New', monospace;
+  color: var(--accent);
+}
+
+h2,
+h3 {
+  font-weight: normal;
+  color: var(--border);
+}
+
+.container {
+  max-width: 55rem;
+  margin: 20px auto;
+  height: 650px;
+  /* Container Border/Outline */
+  outline: 3px solid white;
+  outline-offset: 2px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 10px;
+
+  background-color: var(--container-bg);
+  box-shadow: 0 0 15px rgba(220, 105, 255, 0.2);
+}
+
+.half {
+  flex: 2 1 400px;
+  border: none;
+}
+.full {
+  flex: 1 1 100%;
+  border: none;
+}
+
+.information {
+  padding: 0px 10px;
+}
+
+section {
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+
+/* Header */
+
+header {
+  width: 102%;
+  height: 100px;
+  background-color: #f7ccff;
+  background-image: url(https://web.archive.org/web/20090728044531im_/http://es.geocities.com/zalonego/estrella.gif);
+  border-radius: 15px;
+  margin-left: -6px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+header span {
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  background-color: white;
+  color: var(--accent);
+  padding: 5px 15px;
+  border: 3px solid var(--border);
+  border-radius: 15px;
+  transform: rotate(-2deg);
+  font-family: 'Monaspace Xenon', monospace;
+}
+
+.scrolling-text {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 50%;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Monaspace Krypton', monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #ff00ff;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Header Button Cluster */
+
+.button-cluster {
+  position: absolute;
+  top: 16px;
+  left: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  transform: rotate(-1deg);
+  z-index: 20;
+}
+
+.button-cluster img {
+  width: 88px;
+  height: 31px;
+  display: block;
+  border: 1px solid white;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.button-cluster img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ff00ff;
+  z-index: 30;
+}
+
+/* Blinkies */
+
+blinkie-board {
+  text-align: center;
+  background-color: #fffafc;
+  border: none;
+}
+
+.blinkie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.blinkie-grid img {
+  image-rendering: pixelated;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  height: 22px;
+}
+
+.blinkie-grid img:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px #ff00ff;
+  z-index: 10;
+  cursor: help;
+}
+
+/* Floating Image Links */
 
 .floater,
 .floater2 {
   position: fixed;
   z-index: 50;
-
-  /* This centers the text over the image */
+  width: 230px; /* Fixed width as per your edit */
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* You usually need a set width for containers so the text aligns right */
-  width: 230px;
-  height: auto;
-
   transition: transform 0.3s ease-in-out;
   pointer-events: auto;
 }
 
-/* --- 2. THE IMAGE (Inside the container) --- */
+/* Image inside the container */
 .sticker-img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* --- 3. THE TEXT LINK (Sits on top) --- */
+/* Text on top of the image */
 .sticker-text {
-  position: absolute; /* Floats on top of the image */
-  z-index: 10; /* Ensures it's clickable */
-
-  /* Text Styling */
+  position: absolute;
+  z-index: 10;
   color: white;
   font-weight: bold;
   font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-
-  /* The Black Outline (So you can read it on any image) */
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
     2px 2px 0 #000;
 }
 
+/* Specific Hover Rotations */
 .floater:hover {
   transform: scale(1.1) rotate(5deg);
   cursor: pointer;
 }
-
 .floater2:hover {
   transform: scale(1.1) rotate(-5deg);
   cursor: pointer;
 }
 
 .sticker-container:hover .sticker-text {
-  color: #fac6ff; /* Text turns yellow */
+  color: #fac6ff;
 }
 
-/* Positions */
+/* Floater Positions */
 .bottom-left {
   bottom: 10px;
   left: 10px;
   height: 220px;
 }
-
 .top-right {
   top: 50px;
   right: 50px;
   height: 210px;
 }
-
 .mid-right {
   top: 43%;
   right: 2%;
   height: 140px;
 }
-
 .mid-left {
   top: 38%;
   left: 10px;
   height: 200px;
 }
-
 .top-left {
   top: 0;
   left: 0;
-
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 10px;
   width: 300px;
 }
-
 .bottom-right {
   bottom: 10px;
   right: 30px;
@@ -234,18 +292,37 @@ footer {
   margin-right: 10px;
   height: 230px;
 }
-.pkmn {
-  color: black;
-  background: white;
-  padding: 4px;
-  margin-bottom: 20px;
-  image-rendering: pixelated;
-  border-image-width: 14px;
-  border-image-outset: 7px;
-  border-image-slice: 36%;
-  border-image-repeat: round round;
-  border-style: solid;
-  border-image-source: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVAgMAAAA/TvYGAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxQTFRFAAAAAAAA////+Pj4EZhu1AAAAAR0Uk5TAP///7MtQIgAAABaSURBVHicY2T9zcDA+ptRUkeA4Yg6YyhrAMPq34xZ+nsYRdQYpbw/MLguY2TtLmBInc3IZnWAQfI5o+RzBgY2KxIodkuwPqgpkj4fGFyWo1ukLcBwVI0R4hYAN4IjlkoaqZsAAAAASUVORK5CYII=');
+
+/* Animations */
+
+.swayer {
+  animation: sway 3s infinite ease-in-out;
+  transform-origin: center center;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+.counter-swayer {
+  animation: counter-sway 3s infinite ease-in-out;
+  transform-origin: center center;
+}
+
+@keyframes counter-sway {
+  0%,
+  100% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
 }
 
 @media screen and (max-width: 700px) {
