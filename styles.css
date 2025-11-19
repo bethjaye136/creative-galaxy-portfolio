@@ -23,11 +23,12 @@
 /* --- 2. GLOBAL SETTINGS --- */
 * {
   box-sizing: border-box;
+  font-family: 'Monaspace Xenon';
 }
 
 body {
   padding: 10px;
-  font-family: 'MS PGothic', 'Courier New', sans-serif;
+
   color: var(--text);
 
   /* BACKGROUND: Cute Polka Dots */
@@ -111,15 +112,7 @@ header span {
   flex: 1 1 100%;
 }
 
-/* --- 6. NAVIGATION (Side Menu) --- */
-nav {
-  background: #fff5f9;
-  border: 3px solid var(--border);
-  border-radius: 10px;
-  padding: 10px;
-}
-
-nav div {
+.small {
   text-align: center;
   font-weight: bold;
   color: var(--accent);
@@ -127,6 +120,10 @@ nav div {
   margin-bottom: 10px;
   padding-bottom: 5px;
   letter-spacing: 2px;
+  background: #fff5f9;
+  border: 3px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 nav a {
@@ -212,28 +209,49 @@ footer {
 }
 
 /* --- FLOATING IMAGES CLASS --- */
-.floater {
+.floater,
+.floater2 {
   position: fixed; /* Stays in place when you scroll! */
-  z-index: -1; /* Puts it BEHIND the text boxes */
-  pointer-events: none; /* Lets you click through them if they cover a link */
-  max-width: 200px; /* Prevents them from being too huge */
+  z-index: 50;
+  /* max-width: 250px; Prevents them from being too huge */
   height: auto;
+  transition: transform 0.3s ease-in-out;
+  pointer-events: auto;
+}
+
+.floater:hover {
+  transform: scale(1.1) rotate(5deg);
+  cursor: pointer;
+}
+
+.floater2:hover {
+  transform: scale(1.1) rotate(-5deg);
+  cursor: pointer;
 }
 
 /* Positions */
 .bottom-left {
   bottom: 10px;
   left: 10px;
+  height: 220px;
 }
 
 .top-right {
   top: 20px;
-  right: 20px;
+  right: 50px;
+  height: 210px;
 }
 
-.random-spot {
-  top: 40%;
+.mid-right {
+  top: 38%; /* Same height as your random-spot */
+  right: 5%; /* opposite side */
+  height: 140px;
+}
+
+.mid-left {
+  top: 38%;
   left: 5%;
+  height: 200px;
 }
 /* Position: Top Left */
 .top-left {
@@ -242,14 +260,16 @@ footer {
   /* Optional: Add margin if you don't want it touching the very edge */
   margin-top: 10px;
   margin-left: 10px;
+  width: 300px;
 }
 
 /* Position: Bottom Right */
 .bottom-right {
   bottom: 0;
-  right: 0;
+  right: 30px;
   margin-bottom: 10px;
   margin-right: 10px;
+  height: 230px;
 }
 .pkmn {
   color: black;
@@ -262,80 +282,4 @@ footer {
   border-image-repeat: round round;
   border-style: solid;
   border-image-source: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVAgMAAAA/TvYGAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAxQTFRFAAAAAAAA////+Pj4EZhu1AAAAAR0Uk5TAP///7MtQIgAAABaSURBVHicY2T9zcDA+ptRUkeA4Yg6YyhrAMPq34xZ+nsYRdQYpbw/MLguY2TtLmBInc3IZnWAQfI5o+RzBgY2KxIodkuwPqgpkj4fGFyWo1ukLcBwVI0R4hYAN4IjlkoaqZsAAAAASUVORK5CYII=');
-}
-.photopile {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-}
-.photopile figure {
-  display: inline-block;
-  background: white;
-  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
-  transform: rotate(2deg);
-  margin: 0 -25px;
-}
-.photopile figure img {
-  max-width: calc(100% - 2rem);
-  margin: 1rem 1rem 0 1rem;
-  border: 2px rgb(0, 0, 0, 0.55) inset;
-}
-.photopile figcaption,
-.popovers figcaption {
-  font-family: /* set this to have it match the rest of the page */ ;
-  text-align: center;
-  margin: 0.5rem 1rem 1rem 1rem;
-  font-size: 1rem;
-  color: black;
-}
-.photopile button {
-  background: none;
-  border: none;
-  max-width: 40%;
-}
-.photopile button:hover,
-.photopile button:focus {
-  z-index: 3;
-  cursor: pointer;
-}
-.photopile button:nth-child(2n) {
-  transform: rotate(-10deg);
-}
-.photopile button:nth-child(3n) {
-  transform: rotate(5deg);
-}
-.photopile button:nth-child(4n) {
-  transform: rotate(4deg);
-}
-.photopile button:nth-child(5n) {
-  transform: rotate(-2deg);
-}
-.photopile button:nth-child(6n) {
-  transform: rotate(-7deg);
-}
-:popover-open {
-  border: none;
-  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.55);
-  position: fixed;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-}
-.popovers figure:popover-open {
-  display: block;
-  background: white;
-  width: 88vmin;
-}
-.popovers figure:popover-open figcaption {
-  margin: 2.5vmin 1rem 4vmin 1rem;
-  font-size: 175%;
-  color: black;
-}
-.popovers figure:popover-open img {
-  margin: 4vmin 4vmin 0 4vmin;
-  width: 80vmin;
-  border: 4px rgb(0, 0, 0, 0.55) inset;
 }
