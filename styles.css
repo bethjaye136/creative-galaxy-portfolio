@@ -186,7 +186,7 @@ header span {
 .button-cluster {
   position: absolute;
   top: 16px;
-  left: 40px;
+  left: 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
@@ -393,7 +393,6 @@ header span {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  padding-top: 30px;
 }
 
 .seamless-window {
