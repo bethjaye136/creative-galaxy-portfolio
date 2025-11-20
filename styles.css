@@ -1,11 +1,11 @@
 :root {
-  --text: #450f5a;
-  --border: #3c0f5a;
-  --accent: #440083;
+  --text: #10002b;
+  --border: #240046;
+  --accent: #7a1cac;
   --bg: #fbe9ff;
-  --container-bg: #f9deff;
-  --gradientTop: #fdf9ff;
-  --gradientBottom: #f6e3ff;
+  --container-bg: #c77dff;
+  --gradientTop: #7a1cac;
+  --gradientBottom: #ebd3f8;
 }
 
 /* Layout and Styling */
@@ -29,7 +29,7 @@ body {
   padding: 10px;
   color: var(--text);
   background-color: var(--bg);
-  background-image: url(https://web.archive.org/web/20090728044531im_/http://es.geocities.com/zalonego/estrella.gif);
+  background-image: url(/images/starryybackg.webp);
   background-repeat: repeat;
   background-attachment: fixed;
 }
@@ -71,32 +71,72 @@ h3 {
   color: var(--border);
 }
 
+/* Main Box Layout */
+
 .container {
-  height: 91vh !important;
-  min-height: 650px;
+  height: 85vh;
+  max-height: 85vh;
   max-width: 55rem;
-  margin: 20px auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 5vh auto;
+  border: 4px double var(--border);
+  outline: none;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  padding: 15px;
+  align-content: flex-start;
+  padding: 5px 15px 5px 15px;
   gap: 10px;
-  background-color: var(--container-bg);
-  box-shadow: 0 0 15px rgba(220, 105, 255, 0.2);
+  background-color: rgba(240, 220, 255, 0.9);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) 50%, transparent 50%);
+  box-shadow: 0 0 50px 10px rgba(180, 100, 255, 0.6);
+  background-size: 100% 4px;
 }
 
 .full {
   flex: 1 1 100%;
   border: none;
   min-width: 0;
-  padding: 10px 5px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  height: 280px;
+  justify-content: center;
+}
+
+.main section:nth-child(1) {
+  flex: 2;
+}
+
+.main section:nth-child(2) {
+  flex: 3;
+}
+
+.half {
+  flex: 1;
+  min-width: 250px;
 }
 
 .information {
-  padding: 5px 10px;
   text-align: center;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 /* Header */
@@ -104,11 +144,12 @@ h3 {
 header {
   width: 102%;
   height: 100px;
-  background-image: url(https://web.archive.org/web/20090728044531im_/http://es.geocities.com/zalonego/estrella.gif);
+  background-image: url(/images/starryybackg.webp);
   border-radius: 15px;
-  margin-left: -6px;
   position: relative;
-  margin-bottom: 10px;
+
+  margin-top: 10px;
+  border: 3px double var(--border);
 }
 
 header span {
@@ -123,6 +164,7 @@ header span {
   border-radius: 15px;
   transform: rotate(-2deg);
   font-family: 'Monaspace Xenon', monospace;
+  z-index: 5;
 }
 
 .scrolling-text {
@@ -141,7 +183,6 @@ header span {
 }
 
 /* Header Button Cluster */
-
 .button-cluster {
   position: absolute;
   top: 16px;
@@ -169,11 +210,14 @@ header span {
   z-index: 30;
 }
 
-/* Blinkies */
-
-blinkie-board {
+/* Blinkie Board */
+.blinkie-board {
   text-align: center;
   border: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .blinkie-grid {
@@ -199,13 +243,47 @@ blinkie-board {
   cursor: help;
 }
 
-/* Floating Image Links */
+.retro-box {
+  width: 90%;
+  max-width: 350px;
+  height: 200px;
+  margin: 0 auto 20px auto;
+  border: 2px solid var(--border);
+  box-shadow: none;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image: linear-gradient(var(--gradientBottom) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gradientBottom) 1px, transparent 1px);
+  background-size: 20px 20px;
+  overflow-y: auto;
+}
 
+.retro-box legend {
+  color: var(--text);
+  padding: 2px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.retro-box ul {
+  margin-top: 5px;
+  list-style-type: none;
+  padding: 0 0 0 10px;
+}
+
+.retro-box li {
+  padding: 5px 0;
+}
+
+/* Floating Image Links */
 .floater,
 .floater2 {
   position: fixed;
   z-index: 50;
-  width: 230px; /* Fixed width as per your edit */
+  width: 230px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -214,14 +292,12 @@ blinkie-board {
   pointer-events: auto;
 }
 
-/* Image inside the container */
 .sticker-img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Text on top of the image */
 .sticker-text {
   position: absolute;
   z-index: 10;
@@ -235,7 +311,6 @@ blinkie-board {
     2px 2px 0 #000;
 }
 
-/* Specific Hover Rotations */
 .floater:hover {
   transform: scale(1.1) rotate(5deg);
   cursor: pointer;
@@ -244,37 +319,8 @@ blinkie-board {
   transform: scale(1.1) rotate(-5deg);
   cursor: pointer;
 }
-
 .sticker-container:hover .sticker-text {
   color: #fac6ff;
-}
-
-/* Updates Box */
-.retro-box {
-  height: 150px;
-  border: 2px solid var(--border);
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 15px;
-  background-color: #fdf3ff;
-  background-image: linear-gradient(var(--gradientBottom) 1px, transparent 1px),
-    linear-gradient(90deg, var(--gradientBottom) 1px, transparent 1px);
-  background-size: 20px 20px;
-  box-shadow: inset 0 0 10px rgba(60, 15, 90, 0.1);
-  overflow-y: auto;
-}
-
-.retro-box legend {
-  color: var(--text);
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-weight: bold;
-}
-
-.retro-box ul {
-  padding-left: 10px;
-  margin-top: 5px;
-  list-style-type: none;
 }
 
 /* Floater Positions */
@@ -314,12 +360,10 @@ blinkie-board {
 }
 
 /* Animations */
-
 .swayer {
   animation: sway 3s infinite ease-in-out;
   transform-origin: center center;
 }
-
 @keyframes sway {
   0%,
   100% {
@@ -334,7 +378,6 @@ blinkie-board {
   animation: counter-sway 3s infinite ease-in-out;
   transform-origin: center center;
 }
-
 @keyframes counter-sway {
   0%,
   100% {
@@ -350,22 +393,20 @@ blinkie-board {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  border-radius: 10px;
-  padding: 15px 10px 10px 10px;
-  position: relative;
+  padding-top: 30px;
 }
 
-/* The Sliding Window */
 .seamless-window {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
 }
-
-/* The Moving Track */
 .track {
   display: inline-block;
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 12s linear infinite;
+}
+.track:hover {
+  animation-play-state: paused;
 }
 
 .track img {
@@ -375,7 +416,6 @@ blinkie-board {
   opacity: 0.9;
   transition: 0.2s;
 }
-
 .track img:hover {
   opacity: 1;
   transform: scale(1.1);
@@ -386,12 +426,6 @@ blinkie-board {
   z-index: 10;
 }
 
-/* Pauses when you hover so you can click */
-.track:hover {
-  animation-play-state: paused;
-}
-
-/* The Animation */
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -401,13 +435,110 @@ blinkie-board {
   }
 }
 
-@media screen and (max-width: 700px) {
+/* Media Queries */
+
+@media screen and (max-width: 1300px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+  }
+
+  .background_stickers {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns on tablet */
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+
+  .mobile-nav a {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid var(--border);
+    color: var(--accent);
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  .mobile-nav a:hover {
+    background: var(--accent);
+    color: white;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  html,
+  body {
+    overflow: hidden !important;
+    height: 100vh !important;
+    position: fixed;
+  }
+
   .container {
     flex-direction: column;
+    height: auto !important;
+    border-radius: 0;
+    margin: 5vh auto;
+    overflow-y: auto !important;
+    display: block;
   }
+
   .small,
-  .half {
+  .half,
+  .main,
+  .full {
     width: 100%;
-    border: none;
+    display: block;
+    margin: 0 0 20px 0;
+  }
+
+  .information {
+    padding-bottom: 30px;
+  }
+
+  .retro-box {
+    height: 100px;
+  }
+
+  .background_stickers,
+  .blinkie-grid,
+  .button-cluster,
+  .marquee-container {
+    display: none !important;
+  }
+
+  .main section:nth-child(1),
+  .main section:nth-child(2) {
+    width: 100%; /* Reset width to full on mobile */
+    flex: none;
+  }
+
+  .scrolling-text {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  header {
+    height: auto;
+    min-height: 100px;
+  }
+
+  header span {
+    font-size: 1.5rem;
+    bottom: 0;
+  }
+
+  .mobile-nav {
+    grid-template-columns: 1fr 1fr;
   }
 }
