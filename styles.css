@@ -2,8 +2,8 @@
   --text: #450f5a;
   --border: #3c0f5a;
   --accent: #440083;
-  --bg: #fcf0ff;
-  --container-bg: #ffffff;
+  --bg: #fbe9ff;
+  --container-bg: #f9deff;
   --gradientTop: #fdf9ff;
   --gradientBottom: #f6e3ff;
 }
@@ -12,12 +12,16 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 html,
 body {
-  max-width: 100%;
-  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 body {
@@ -68,41 +72,31 @@ h3 {
 }
 
 .container {
+  height: 91vh !important;
+  min-height: 650px;
   max-width: 55rem;
   margin: 20px auto;
-  height: 650px;
-  /* Container Border/Outline */
-  outline: 3px solid white;
-  outline-offset: 2px;
   border-radius: 15px;
-
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
   gap: 10px;
-
   background-color: var(--container-bg);
   box-shadow: 0 0 15px rgba(220, 105, 255, 0.2);
 }
 
-.half {
-  flex: 2 1 400px;
-  border: none;
-}
 .full {
   flex: 1 1 100%;
   border: none;
+  min-width: 0;
+  padding: 10px 5px;
 }
 
 .information {
-  padding: 0px 10px;
-}
-
-section {
-  background: white;
-  border: 2px solid var(--border);
-  border-radius: 10px;
-  padding: 10px 5px;
+  padding: 5px 10px;
+  text-align: center;
+  margin: 0;
 }
 
 /* Header */
@@ -110,7 +104,6 @@ section {
 header {
   width: 102%;
   height: 100px;
-  background-color: #f7ccff;
   background-image: url(https://web.archive.org/web/20090728044531im_/http://es.geocities.com/zalonego/estrella.gif);
   border-radius: 15px;
   margin-left: -6px;
@@ -123,8 +116,8 @@ header span {
   position: absolute;
   bottom: -10px;
   right: 10px;
-  background-color: white;
-  color: var(--accent);
+  background-color: var(--bg);
+  color: var(--text);
   padding: 5px 15px;
   border: 3px solid var(--border);
   border-radius: 15px;
@@ -180,7 +173,6 @@ header span {
 
 blinkie-board {
   text-align: center;
-  background-color: #fffafc;
   border: none;
 }
 
@@ -257,6 +249,34 @@ blinkie-board {
   color: #fac6ff;
 }
 
+/* Updates Box */
+.retro-box {
+  height: 150px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
+  background-color: #fdf3ff;
+  background-image: linear-gradient(var(--gradientBottom) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gradientBottom) 1px, transparent 1px);
+  background-size: 20px 20px;
+  box-shadow: inset 0 0 10px rgba(60, 15, 90, 0.1);
+  overflow-y: auto;
+}
+
+.retro-box legend {
+  color: var(--text);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.retro-box ul {
+  padding-left: 10px;
+  margin-top: 5px;
+  list-style-type: none;
+}
+
 /* Floater Positions */
 .bottom-left {
   bottom: 10px;
@@ -322,6 +342,62 @@ blinkie-board {
   }
   50% {
     transform: rotate(-8deg);
+  }
+}
+
+/* Bottom Marquee */
+.marquee-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 15px 10px 10px 10px;
+  position: relative;
+}
+
+/* The Sliding Window */
+.seamless-window {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* The Moving Track */
+.track {
+  display: inline-block;
+  animation: scroll-left 25s linear infinite;
+}
+
+.track img {
+  margin: 5px 0px;
+  vertical-align: middle;
+  border: 1px solid var(--border);
+  opacity: 0.9;
+  transition: 0.2s;
+}
+
+.track img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px #ff00ff;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+/* Pauses when you hover so you can click */
+.track:hover {
+  animation-play-state: paused;
+}
+
+/* The Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
