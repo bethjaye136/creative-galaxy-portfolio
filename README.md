@@ -15,6 +15,8 @@ This is a digital garden where I archive my thoughts, shrines, and pixel art col
 
 [🚀 Visit the Live Site](https://bethsdigitalgalaxy.neocities.org/)
 
+![Site Preview](./images/Screenshot.png)
+
 </div>
 
 ---
