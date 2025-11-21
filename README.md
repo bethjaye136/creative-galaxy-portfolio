@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://64.media.tumblr.com/4f3cbb1b66a76a19a9794a162373abc5/tumblr_inline_n258pbAEBc1qhwjx8.png" width="100%" height="150" style="object-fit:cover; border-radius: 15px;">
+  <img src="/images/spacebg.gif" width="100%" height="150" style="object-fit:cover; border-radius: 15px;">
 
 # ✨ Beth's Digital Galaxy ✨
 
