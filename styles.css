@@ -510,11 +510,12 @@ header span {
   }
 
   .information {
+    margin: 0px 10px;
     padding-bottom: 30px;
   }
 
   .retro-box {
-    height: 100px;
+    height: 130px;
   }
 
   .background_stickers,
