@@ -85,7 +85,7 @@ p {
 .container {
   height: 85vh;
   max-height: 85vh;
-  max-width: 55rem;
+  max-width: 50vw;
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -335,35 +335,35 @@ header span {
 
 /* Floater Positions */
 .bottom-left {
-  bottom: 50px;
-  left: 8%;
+  bottom: 20px;
+  left: 80px;
   height: 220px;
 }
 .top-right {
-  top: 70px;
-  right: 8%;
+  top: 60px;
+  right: 80px;
   height: 210px;
 }
 .mid-right {
-  top: 41%;
-  right: 8%;
+  top: 45%;
+  right: 80px;
   height: 140px;
+  transform: translateY(-50%);
 }
 .mid-left {
-  top: 41%;
-  left: 8%;
+  top: 45%;
+  left: 80px;
   height: 200px;
+  transform: translateY(-50%);
 }
 .top-left {
-  top: 20px;
-  left: 8%;
+  top: 10px;
+  left: 70px;
   width: 300px;
 }
 .bottom-right {
-  bottom: 50px;
-  right: 8%;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  bottom: 20px;
+  right: 80px;
   height: 230px;
 }
 
