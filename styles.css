@@ -71,6 +71,15 @@ h3 {
   color: var(--border);
 }
 
+h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
 /* Main Box Layout */
 
 .container {
@@ -87,7 +96,7 @@ h3 {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: stretch;
   padding: 5px 15px 5px 15px;
   gap: 10px;
   background-color: rgba(240, 220, 255, 0.9);
@@ -127,7 +136,7 @@ h3 {
 
 .information {
   text-align: center;
-  margin: 0;
+  margin-top: -50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,6 +234,7 @@ header span {
   flex-wrap: wrap;
   justify-content: center;
   gap: 4px;
+  padding-bottom: 5px;
 }
 
 .blinkie-grid img {
@@ -246,7 +256,7 @@ header span {
 .retro-box {
   width: 90%;
   max-width: 350px;
-  height: 200px;
+  height: 300px;
   margin: 0 auto 20px auto;
   border: 2px solid var(--border);
   box-shadow: none;
@@ -325,35 +335,33 @@ header span {
 
 /* Floater Positions */
 .bottom-left {
-  bottom: 10px;
-  left: 10px;
+  bottom: 50px;
+  left: 8%;
   height: 220px;
 }
 .top-right {
-  top: 50px;
-  right: 50px;
+  top: 70px;
+  right: 8%;
   height: 210px;
 }
 .mid-right {
-  top: 43%;
-  right: 2%;
+  top: 41%;
+  right: 8%;
   height: 140px;
 }
 .mid-left {
-  top: 38%;
-  left: 10px;
+  top: 41%;
+  left: 8%;
   height: 200px;
 }
 .top-left {
-  top: 0;
-  left: 0;
-  margin-top: 5px;
-  margin-left: 10px;
+  top: 20px;
+  left: 8%;
   width: 300px;
 }
 .bottom-right {
-  bottom: 10px;
-  right: 30px;
+  bottom: 50px;
+  right: 8%;
   margin-bottom: 10px;
   margin-right: 10px;
   height: 230px;

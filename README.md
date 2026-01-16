@@ -11,9 +11,9 @@
 <br><br>
 
 **Welcome to the source code of my personal website!** <br>
-I keep some of my personal projects here, helpful resources and contact information incase you'd like to work with me!
+I keep some of my personal projects here, helpful resources and other silly things that take me back to the days of the old web!
 
-[🚀 Visit the Live Site](https://bethsdigitalgalaxy.neocities.org/)
+[🚀 Visit the Live Site](https://bethjaye136.github.io/creative-galaxy-portfolio/)
 
 ![Site Preview](/images/webscreenshot.png)
 
