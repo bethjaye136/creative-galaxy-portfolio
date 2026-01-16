@@ -29,7 +29,7 @@ body {
   padding: 10px;
   color: var(--text);
   background-color: var(--bg);
-  background-image: url(/images/starryybackg.webp);
+  background-image: url(images/starryybackg.webp);
   background-repeat: repeat;
   background-attachment: fixed;
 }
@@ -144,7 +144,7 @@ h3 {
 header {
   width: 102%;
   height: 100px;
-  background-image: url(/images/starryybackg.webp);
+  background-image: url(images/starryybackg.webp);
   border-radius: 15px;
   position: relative;
 
