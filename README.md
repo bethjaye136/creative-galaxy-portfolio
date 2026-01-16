@@ -4,18 +4,18 @@
 
 # ✨ Beth's Digital Galaxy ✨
 
-  <img src="https://img.shields.io/badge/Neocities-Hosted-FF66D9?style=for-the-badge&logo=neocities&logoColor=white">
+  <img src="https://img.shields.io/badge/GitHub_Pages-Hosted-FF66D9?style=for-the-badge&logo=neocities&logoColor=white">
   <img src="https://img.shields.io/badge/Style-Retro%20Y2K-7A1CAC?style=for-the-badge">
   <img src="https://img.shields.io/badge/Status-Under%20Construction-440083?style=for-the-badge">
 
 <br><br>
 
 **Welcome to the source code of my personal website!** <br>
-This is a digital garden where I archive my thoughts, shrines, and pixel art collection.
+I keep some of my personal projects here, helpful resources and contact information incase you'd like to work with me!
 
 [🚀 Visit the Live Site](https://bethsdigitalgalaxy.neocities.org/)
 
-![Site Preview](./images/Screenshot.png)
+![Site Preview](/images/webscreenshot.png)
 
 </div>
 
@@ -47,10 +47,9 @@ This site is hand-coded with love (and a lot of CSS variables).
 
 ### 📝 Star Log (Recent Updates)
 
-- **11/21:** Uploaded everything and deployed website of Neocities.
-- **11/20:** Finished off the main layout, structure and components of the homepage.
-- **11/19:** Fixed the marquee overflow glitch on tablets.
-- **11/18:** Added the floating sticker collection.
+- **16/01:** Added FocusBoy Timer to the main page.
+- **2026**
+- **20/11** Finished off the main layout, structure and components of the homepage and deployed website on Neocities.
 
 ---
 
